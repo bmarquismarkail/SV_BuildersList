@@ -21,13 +21,9 @@ namespace SB_Builderslist
         private Rectangle initalPosition;
 
         public ScavengerMenu(
-        int x,
-        int y,
-        int width,
-        int height,
         Item lastScavengerItem,
         StardewModdingAPI.IReflectionHelper reflection)
-      : base(x, y, width, height, false)
+      : base(IClickableMenu.spaceToClearSideBorder, Game1.viewport.Height - ChatBox.chatboxHeight - IClickableMenu.spaceToClearSideBorder, Game1.tileSize, Game1.tileSize, false)
         {
             this.Reflection = reflection;
             initalPosition = new Rectangle(this.xPositionOnScreen, this.yPositionOnScreen, this.width, this.height);
@@ -45,6 +41,9 @@ namespace SB_Builderslist
 
         public void getDimensions()
         {
+            initalPosition.X = IClickableMenu.spaceToClearSideBorder;
+            initalPosition.Y = Game1.viewport.Height - ChatBox.chatboxHeight - IClickableMenu.spaceToClearSideBorder;
+
             if (ScavengerRecipe == null)
             {
                 this.xPositionOnScreen = initalPosition.X;

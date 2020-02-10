@@ -123,7 +123,7 @@ namespace SB_Builderslist
 
         private void OnSaveLoaded(object sender, SaveLoadedEventArgs e)
         {
-            scavengermenu = new ScavengerMenu(IClickableMenu.spaceToClearSideBorder, Game1.viewport.Height - ChatBox.chatboxHeight - IClickableMenu.spaceToClearSideBorder, Game1.tileSize, Game1.tileSize, null, this.Helper.Reflection);
+            scavengermenu = new ScavengerMenu(null, this.Helper.Reflection);
             this.config = this.Helper.ReadConfig<ModConfig>();
             isHidden = !this.config.isActive;
             if (this.config.currentRecipe != null)

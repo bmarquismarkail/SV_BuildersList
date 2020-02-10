@@ -6,5 +6,5 @@
   "UniqueID": "SB_BuildersList",
   "EntryDll": "BuildersList.dll",
   "MinimumApiVersion": "3.0.0",
-  "UpdateKeys": [ "5347" ]
+  "UpdateKeys": [ "Nexus:5347" ]
 }
